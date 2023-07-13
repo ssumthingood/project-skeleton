@@ -5,6 +5,8 @@ import {
     Route,
   } from "react-router-dom";
 import Main from "../pages/Main";
+import Main2 from "../pages/Main2";
+
 
 function Router() {
     // 이해를 돕기 위해 Router객체 안에 데이터를 지정했지만
@@ -13,7 +15,6 @@ function Router() {
     // Router에선 라우팅만
     const [address, setAdd] = useState('');
     let hello = 'hello';
-
     const myData = {
         age:27,
         blood:'O'
@@ -38,7 +39,7 @@ function Router() {
         {/* Route 컴포넌트를 커스텀해서 로그인해야 들어갈 수 있는 링크인지 아닌지 검증 예정 */}
         {/* components 디렉토리 내에 PublicRoute, AuthRoute 컴포넌트 생성해서 할듯? */}
         <Route path="/" element={<Main user={myUser} address={address} userData={myData}/>} />
-        <Route path="/:id" element={<Main user={myUser} address={address}/>} />
+        <Route path="/:id" element={<Main2 user={myUser} address={address}/>} />
         </Routes>
         </BrowserRouter>
     )
