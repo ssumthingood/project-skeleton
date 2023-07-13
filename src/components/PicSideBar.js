@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useState } from "react";
 import {
   Card,
@@ -16,11 +17,31 @@ import {
 } from "@heroicons/react/24/solid";
  
 export default function PicSideBar() {
+
+    const objItems = [
+        { item: "🦜", name: "Parrot" },
+        { item: "🦖", name: "Dinosaur" },
+        { item: "🦆", name: "Duck" },
+        { item: "🦔", name: "Porkypine" },
+        { item: "🐤", name: "Chick" },
+        { item: "🐧", name: "Penguin" },
+        { item: "🦜", name: "Parrot" },
+        { item: "🦖", name: "Dinosaur" },
+        { item: "🦆", name: "Duck" },
+        { item: "🦔", name: "Porkypine" },
+        { item: "🐤", name: "Chick" },
+        { item: "🐧", name: "Penguin" }
+      ];
+
   const [menu, setMenu] = useState(0);
 
     return (<>
       <Card id="sideMenu" className={`float-right top-0 h-screen w-full max-w-[15rem] p-4 shadow-xl shadow-blue-gray-900/5 text-purple-600 ${menu===0 ? "hidden":""}`}>
-        {menu===1 && <div>대충 사용자 목록</div>}
+        {menu===1 && 
+        <div>
+            대충 사용자 목록
+        </div>
+        }
         {menu===2 && <div>대충 배경 고르기</div>}
         {menu===3 && <div>대충 스티커</div>}
       </Card>
