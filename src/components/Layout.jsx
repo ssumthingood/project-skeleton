@@ -1,16 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function Layout({children}){
-    return (
-    <div className="bg-blue-50 w-screen h-screen">
-        {children}
-    </div>
-    )
+function Layout({ children }) {
+  return <div className="bg-blue-50 w-screen min-h-screen">{children}</div>;
 }
 
 export default Layout;
 
 Layout.propTypes = {
-    children:PropTypes.element.isRequired
-}
+  children: PropTypes.element.isRequired,
+};
