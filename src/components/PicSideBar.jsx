@@ -16,12 +16,19 @@ import {
   PowerIcon,
 } from "@heroicons/react/24/solid";
 import UserCard from "./UserCard";
+import BgCard from "./BgCard";
  
 export default function PicSideBar() {
     const buttons = [
       {word:"사용자", idx:1},
       {word:"배경", idx:2},
       // {word:"스티커", idx:3}
+    ]
+
+    const bGs =[
+      {bgName : "산"},
+      {bgName : "바다"},
+      {bgName : "우주"},
     ]
 
     const objItems = [
@@ -42,14 +49,18 @@ export default function PicSideBar() {
   const [menu, setMenu] = useState(0);
 
     return (<>
-      <Card id="sideMenu" className={`float-right top-0 h-screen w-full max-w-[15rem] p-4 shadow-xl shadow-blue-gray-900/5 text-purple-600 ${menu===0 ? "hidden":""}`}>
+      <Card id="sideMenu" className={`float-right top-0 h-screen w-full max-w-[15rem] p-4 shadow-xl shadow-blue-gray-900/5 text-blue-600 ${menu===0 ? "hidden":""}`}>
         {menu===1 && 
-        <div className="h-full overflow-x-scroll">
+        <div className="h-full overflow-y-scroll">
             대충 사용자 목록
           {objItems.map((item,idx)=><UserCard userName={item.name} isHost={idx===0}/>)}
         </div>
         }
-        {menu===2 && <div>대충 배경 고르기</div>}
+        {menu===2 &&
+        <div className="h-full">
+          {bGs.map(bg=><BgCard bgName={bg.bgName}/>)}
+        </div>
+        }
         {menu===3 && <div>대충 스티커</div>}
       </Card>
       <div className="flex  flex-col float-right gap-3">

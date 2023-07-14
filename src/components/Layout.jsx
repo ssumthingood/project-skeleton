@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function Layout({children}){
     return (
-    <div className="bg-blue-100 w-screen h-screen">
+    <div className="bg-blue-50 w-screen h-screen">
         {children}
     </div>
     )
