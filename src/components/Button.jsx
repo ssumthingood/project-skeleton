@@ -14,7 +14,11 @@ function Button({word, userfunc}){
 
 export default Button;
 
+Button.defaultProps = {
+    userfunc : ()=>{}
+}
+
 Button.propTypes = {
     word : PropTypes.string.isRequired,
-    userfunc : PropTypes.func.isRequired
+    userfunc : PropTypes.func
 }

@@ -1,11 +1,12 @@
 import React from "react";
 import PicSideBar from "../components/PicSideBar";
+import Layout from "../components/Layout";
 
 function TakePic(){
     return (
-    <div>
+    <Layout>
         <PicSideBar/>
-    </div>
+    </Layout>
     )
 }
 

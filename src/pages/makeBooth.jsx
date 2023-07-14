@@ -1,7 +1,8 @@
 import React from "react";
+import Layout from "../components/Layout";
 
 function MakeBooth(){
-    return <div>MakeBooth</div>
+    return <Layout>MakeBooth</Layout>
 }
 
 export default MakeBooth;

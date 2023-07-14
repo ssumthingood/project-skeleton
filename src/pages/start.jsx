@@ -1,11 +1,12 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
+import Layout from "../components/Layout";
 
 function Start(){
     return (
-    <div>
+    <Layout>
         <Sidebar/>
-    </div>
+    </Layout>
     )
 }
 
