@@ -6,11 +6,11 @@ import UserSideBar from '../components/UserSideBar';
 function MakeBooth() {
   return (
     <Layout>
-      <div className="fixed top-4 left-4 h-10 text-blue-600">
-        Code : XXX_XXX_XXX
-      </div>
+      <div className="h-10 w-full text-blue-600">Code : XXX_XXX_XXX</div>
       <UserSideBar />
-      <Link to="/takepic">Take Picture</Link>
+      <Link to="/takepic" className="block relative mx-auto w-fit">
+        Take Picture
+      </Link>
     </Layout>
   );
 }

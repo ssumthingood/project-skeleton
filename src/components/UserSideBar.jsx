@@ -1,6 +1,8 @@
 import React from 'react';
-import { Card, Typography, List, ListItem } from '@material-tailwind/react';
+import { Link } from 'react-router-dom';
+import { Card, Typography } from '@material-tailwind/react';
 import UserCard from './UserCard';
+import TextInput from './TextInput';
 
 export default function UserSideBar() {
   const users = [{ name: '홍길동' }, { name: '박길동' }, { name: '최길동' }];
@@ -19,12 +21,19 @@ export default function UserSideBar() {
           <UserCard userName={user.name} />
         ))}
       </ul>
-      <button type="button" className="w-full h-10">
+      <TextInput type="text" />
+      <button
+        type="button"
+        className="w-full h-10 hover:bg-blue-500 hover:text-white duration-200"
+      >
         이름 변경
       </button>
-      <button type="button" className="w-full h-10">
+      <Link
+        className="w-full h-10 text-center hover:bg-blue-500 hover:text-white duration-200 leading-10"
+        to="/"
+      >
         나가기
-      </button>
+      </Link>
     </Card>
   );
 }
