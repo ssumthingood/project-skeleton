@@ -15,8 +15,14 @@ import {
   InboxIcon,
   PowerIcon,
 } from "@heroicons/react/24/solid";
+import UserCard from "./UserCard";
  
 export default function PicSideBar() {
+    const buttons = [
+      {word:"사용자", idx:1},
+      {word:"배경", idx:2},
+      // {word:"스티커", idx:3}
+    ]
 
     const objItems = [
         { item: "🦜", name: "Parrot" },
@@ -38,17 +44,18 @@ export default function PicSideBar() {
     return (<>
       <Card id="sideMenu" className={`float-right top-0 h-screen w-full max-w-[15rem] p-4 shadow-xl shadow-blue-gray-900/5 text-purple-600 ${menu===0 ? "hidden":""}`}>
         {menu===1 && 
-        <div>
+        <div className="h-full overflow-x-scroll">
             대충 사용자 목록
+          {objItems.map((item,idx)=><UserCard userName={item.name} isHost={idx===0}/>)}
         </div>
         }
         {menu===2 && <div>대충 배경 고르기</div>}
         {menu===3 && <div>대충 스티커</div>}
       </Card>
-      <div className="flex float-right flex-col">
-      <button type="button" onClick={()=>menu===1 ? setMenu(0):setMenu(1)}>사용자</button>
-        <button type="button" onClick={()=>menu===2 ? setMenu(0):setMenu(2)}>배경</button>
-        <button type="button" onClick={()=>menu===3 ? setMenu(0):setMenu(3)}>스티커</button>
+      <div className="flex  flex-col float-right gap-3">
+        {buttons.map(btn=>(
+            <button type="button" onClick={()=>menu===btn.idx ? setMenu(0):setMenu(btn.idx)}>{btn.word}</button>
+          ))}
       </div>
     </>);
 }

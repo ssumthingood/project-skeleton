@@ -14,6 +14,7 @@ import {
   InboxIcon,
   PowerIcon,
 } from "@heroicons/react/24/solid";
+import TextInput from "./TextInput";
  
 export default function Sidebar() {
   const [visible, setVisible] = useState(false);
@@ -61,6 +62,14 @@ export default function Sidebar() {
               <PowerIcon className="h-5 w-5" />
             </ListItemPrefix>
             Log Out
+          </ListItem>
+            ID
+          <ListItem>
+            <TextInput type="text" change={(e)=>{console.log(e.target.value)}}/>
+          </ListItem>
+            PASSWORD
+          <ListItem>
+            <TextInput type="password" change={(e)=>{console.log(e.target.value)}}/>
           </ListItem>
           <ListItem onClick={()=>{setVisible(false); console.log(visible)}}>
             <ListItemPrefix>

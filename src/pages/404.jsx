@@ -1,7 +1,8 @@
 import React from "react";
+import Layout from "../components/Layout";
 
 function NoFile(){
-    return <div>NoFile</div>
+    return <Layout>NoFile</Layout>
 }
 
 export default NoFile;
