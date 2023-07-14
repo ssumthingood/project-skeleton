@@ -2,7 +2,6 @@ import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 
-
 // Main(props) 로 접근 가능하지만 구조분해할당 사용하여 {user, address} 형태로 분해
 function Main2({user, address, userData}) {
     // 라우팅 경로가 '/:id' 이고 url이 'http://localhost:3000/112?data=12' 일 경우

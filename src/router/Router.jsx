@@ -5,11 +5,11 @@ import {
     Route,
     Navigate
   } from "react-router-dom";
-import Start from "../pages/Start";
-import MakeBooth from "../pages/MakeBooth";
-import TakePic from "../pages/TakePic";
-import AfterTake from "../pages/AfterfTake";
-import Finish from "../pages/Finish";
+import Start from "../pages/start";
+import MakeBooth from "../pages/makeBooth";
+import TakePic from "../pages/takePic";
+import AfterTake from "../pages/afterfTake";
+import Finish from "../pages/finish";
 import NoFile from "../pages/404";
 
 function Router() {
