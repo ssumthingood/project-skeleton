@@ -1,9 +1,8 @@
-# 리액트 코딩 컨벤션 및 구조 탐구
-
-### 재활 중...
+# 프로젝트용 리액트 코딩 컨벤션 및 구조 정의
 
 ## 개선한/놓쳤던 점
 
+- components 코드 -> PascalCase
 - pages -> camelCase
 - js, jsx 확장자 명시화
 - nvm을 통한 버전 관리
